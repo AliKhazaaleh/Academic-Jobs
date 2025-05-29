@@ -19,6 +19,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        /*
+            set pattern for route parameters
+            This will ensure that the 'id' parameter in routes only accepts numeric values.
+        */
+
+        Route::pattern('id', '[0-9]+');
+
+        /*
+            share a variable with all views
+            View::share('key', 'value');
+        */
+        
     }
 }
