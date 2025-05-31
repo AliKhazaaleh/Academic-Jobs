@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,13 +24,11 @@ class AppServiceProvider extends ServiceProvider
             set pattern for route parameters
             This will ensure that the 'id' parameter in routes only accepts numeric values.
         */
-
         Route::pattern('id', '[0-9]+');
 
         /*
             share a variable with all views
             View::share('key', 'value');
         */
-        
     }
 }
